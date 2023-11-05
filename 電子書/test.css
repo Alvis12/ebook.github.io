@@ -1,0 +1,70 @@
+/* storybook.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#story-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.book {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+img {
+    max-width: 100%;
+    max-height: 70vh; /* 設定圖片的最大高度 */
+}
+
+/* storybook.css */
+
+/* 其他CSS样式 */
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 10px;
+}
+
+#prev-page {
+    left: 10px;
+}
+
+#next-page {
+    right: 10px;
+}
+
+
+.page {
+    width: 48%; /* 設定頁面的寬度，以便左右擺放 */
+    text-align: center;
+    padding: 20px;
+
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.5s;
+}
+
+.page.odd {
+    transform: perspective(1200px) rotateY(-180deg);
+}
+
+.page.even {
+    transform: perspective(1200px) rotateY(0deg);
+}
